@@ -548,7 +548,7 @@ contract ERC721Mintable is ERC721Metadata("WKRealEstate", "WKRE", "https://s3-us
 
     function mint(address to, uint256 tokenId) public onlyOwner returns (bool) {
         super._mint(to, tokenId);
-        super.setTokenURI(tokenId);
+        setTokenURI(tokenId);
         return true;
     }
 }
